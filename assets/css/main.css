@@ -3010,11 +3010,16 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			width: 25em;
+			overflow: hidden;
 		}
 
 			.spotlights > section > .image img {
 				border-radius: 0;
 				display: block;
+				width: 100%;        /* Make image fill parent width */
+				height: 100%;       /* Make image fill parent height */
+				object-fit: cover;  /* Ensures aspect ratio is maintained while filling container, OR use 'contain' to avoid cropping entirely */
+				object-position: center;
 			}
 
 			.spotlights > section > .image:before {
